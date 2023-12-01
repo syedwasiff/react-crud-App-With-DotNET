@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { FcEmptyTrash, FcServices } from "react-icons/fc";
 
 const CRUD = () => {
     const [data, setData] = useState([]);
@@ -176,8 +177,8 @@ const CRUD = () => {
                                     <td>{item.age}</td>
                                     <td>{item.isActive}</td>
                                     <td colSpan={2}>
-                                        <button className="btn btn-info" onClick={() => handleEdit(item.id)}>Edit</button> &nbsp;
-                                        <button className="btn btn-danger" onClick={() => handleDelete(item.id)}>Delete</button>
+                                        <button className="btn btn-lg" onClick={() => handleEdit(item.id)}><FcServices /></button> &nbsp;
+                                        <button className='btn btn-lg' onClick={() => handleDelete(item.id)}><FcEmptyTrash /></button>
                                     </td>
                                 </tr>
                             )
